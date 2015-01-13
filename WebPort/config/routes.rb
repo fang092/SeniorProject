@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  get 'users/new'
 
-  get 'static_pages/gallery'
+  root    'static_pages#home'
 
-  get 'static_pages/profiles'
+  get 'gallery' => 'static_pages#gallery'
 
-  get 'static_pages/mhcodex'
+  get 'profiles' => 'static_pages#profiles'
 
-  get 'static_pages/about'
+  get 'mhcodex'  => 'static_pages#mhcodex'
+
+  get 'about' => 'static_pages#about'
+
+  get 'contact' => 'static_pages#contact'
+
+  get 'signup' => 'users#new'
 
   resources :users
 

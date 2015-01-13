@@ -9,5 +9,12 @@ class StaticPagesController < ApplicationController
   end
 
   def mhcodex
+  end 
+
+  def about
+  end 
+
+  def contact
   end
+  
 end
