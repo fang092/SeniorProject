@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title><%= yield(:title) %></title>
+    <link rel="stylesheet" href = "css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="css/simple-sidebar.css"></link>
+    <script src="js/jquery.js"></script>
+    <script src ="js/bootstrap.min.js"></script>
+
+        <title><%= yield(:title) %></title>
     <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -12,11 +18,15 @@
     <![endif]-->
   </head>
   <body>
-    <%= render 'layouts/header' %>
+    <div id = "wrapper">
+      <div>
+        <%= render 'layouts/header' %>
 
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
+        <div class="page-content-wrapper">
+          <%= yield %>
+          <%= render 'layouts/footer' %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
