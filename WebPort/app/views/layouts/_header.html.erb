@@ -12,9 +12,9 @@
           <li><%= link_to "Home",   root_path %></li>
           <% if logged_in? %>
             <li><%= link_to "Users", '#' %></li>
-              <li class="dropdown-toggle">
-                <a href="#" class="dropdown-menu" data-toggle="dropdown">
-                  Account <b class="caret"></b>
+              <li id = "accountmenu" class="dropdown-toggle">
+                <a href="#" class="dropdown" >
+                  Account 
                 </a>
                 <ul class="dropdown-toggle" >
                   <li><%= link_to "Profile", current_user %></li>
