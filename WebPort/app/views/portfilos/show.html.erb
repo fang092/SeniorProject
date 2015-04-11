@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @portfilo.name %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @portfilo.info %>
+</p>
+
+<%= link_to 'Edit', edit_portfilo_path(@portfilo) %> |
+<%= link_to 'Back', portfilos_path %>
