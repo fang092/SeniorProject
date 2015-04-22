@@ -1,0 +1,28 @@
+<div class = "jumbotron page-content-wrapper">
+	<div class = "container-fluid">	
+
+
+	<p id="notice"><%= notice %></p>
+
+	<%= image_tag @portfolio.image.url(:medium) %>
+
+	<p>
+	  <strong>Info:</strong>
+	  <%= @portfolio.info %>
+	</p>
+
+	<p>
+	  <strong>Links:</strong>
+	  <%= @portfolio.links %>
+	</p>
+
+	<p>
+	  <strong>Content:</strong>
+	  <%= @portfolio.content %>
+	</p>
+
+	<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
+	<%= link_to 'Back', portfolios_path %>
+	
+	</div>
+</div>

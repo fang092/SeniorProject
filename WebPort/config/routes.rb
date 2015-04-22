@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :portfolios
+
   resources :portfilos
 
   get 'password_resets/new'
