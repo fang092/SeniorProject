@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :monsters
+
+  resources :pdfs
+
+  resources :photos
+
   resources :portfolios
 
   resources :portfilos

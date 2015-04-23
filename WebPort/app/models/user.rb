@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
 
   has_attached_file  :image, styles: { large: "600x600#" , medium: "300x300#", thumb: "100x100#" }
   validates_attachment_content_type :image, content_type:  /\Aimage\/.*\Z/
-  has_many :portfilo
+  has_many :portfolios  , dependent: :destroy
 
  # Returns the hash digest of the given string.
   def User.digest(string)

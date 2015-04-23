@@ -20,15 +20,30 @@
     <%= f.label :info %><br>
     <%= f.text_field :info %>
   </div>
+
   <div class="field">
     <%= f.label :links %><br>
     <%= f.text_field :links %>
   </div>
+
   <div class="field">
     <%= f.label :content %><br>
     <%= f.text_field :content %>
   </div>
+
+  <div class = "field">
+    <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
+  </div>
+
+  <div class = "field">
+    <%= f.label :pdf %><br>
+    <%= f.file_field :pdf %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
