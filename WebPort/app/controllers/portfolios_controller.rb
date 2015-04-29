@@ -16,7 +16,7 @@ class PortfoliosController < ApplicationController
 
   # GET /portfolios/new
   def new
-    @portfolio = Portfolio.new(:user_id => params[:id])
+    @portfolio = Portfolio.new
   end
 
   # GET /portfolios/1/edit
@@ -26,7 +26,7 @@ class PortfoliosController < ApplicationController
   # POST /portfolios
   # POST /portfolios.json
   def create
-    @portfolio = Portfolio.new(portfolio_params)
+    @portfolio = current_user.portfolio.build(:user_id => params[:user_id])
 
     
     respond_to do |format|
