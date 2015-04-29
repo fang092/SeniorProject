@@ -6,5 +6,6 @@ class CreatePhotos < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    
   end
 end

@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :monsters
-
-  resources :pdfs
-
-  resources :photos
-
-  resources :portfolios
-
-  resources :portfilos
+  
 
   get 'password_resets/new'
 
@@ -32,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'signup' => 'users#new'
 
+  get 'portfolios' => 'portfolios#index'
+
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
@@ -40,5 +34,10 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :monsters
+  resources :pdfs
+  resources :photos
+  resources :portfolios,   only: [:create, :destroy, :edit, :new]
+  
 
 end

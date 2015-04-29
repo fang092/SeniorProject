@@ -6,4 +6,5 @@ class Portfolio < ActiveRecord::Base
   has_many :photos  , dependent: :destroy
   has_many :pdfs  , dependent: :destroy
   belongs_to :user
+  validates :user_id, presence: true
 end

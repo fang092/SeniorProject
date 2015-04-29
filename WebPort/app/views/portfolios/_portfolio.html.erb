@@ -1,0 +1,8 @@
+<li id="portfolio-<%= portfolio.id %>">
+  <%= link_to image_for(portfolio.user, size: 50), portfolio.user %>
+  <span class="user"><%= link_to portfolio.user.name, portfolio.user %></span>
+  <span class="content"><%= portfolio.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(portfolio.created_at) %> ago.
+  </span>
+</li>

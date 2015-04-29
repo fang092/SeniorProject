@@ -1,6 +1,8 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
 
+
+
   # GET /portfolios
   # GET /portfolios.json
   def index
@@ -14,7 +16,7 @@ class PortfoliosController < ApplicationController
 
   # GET /portfolios/new
   def new
-    @portfolio = Portfolio.new
+    @portfolio = Portfolio.new(:user_id => params[:id])
   end
 
   # GET /portfolios/1/edit
@@ -25,6 +27,7 @@ class PortfoliosController < ApplicationController
   # POST /portfolios.json
   def create
     @portfolio = Portfolio.new(portfolio_params)
+
     
     respond_to do |format|
       if @portfolio.save
@@ -69,6 +72,6 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.require(:portfolio).permit(:info, :links, :content , :image, :photo, :pdf)
+      params.require(:portfolio).permit(:info, :links, :content , :image, :photo, :pdf, :user)
     end
 end
