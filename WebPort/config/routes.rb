@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   resources :monsters
   resources :pdfs
   resources :photos
-  resources :portfolios,   only: [:create, :destroy, :edit, :new]
+  resources :portfolios,   only: [:create, :destroy, :edit, :new, :show, :update]
   
 
 end

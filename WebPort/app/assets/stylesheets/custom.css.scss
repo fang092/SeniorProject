@@ -209,13 +209,18 @@ input {
 }
 /* portfolios */
 
-.portfolios {
-  list-style: none;
-  padding: 0;
-  li {
+.portfolios
+{
+    list-style: none;
+    padding: 0;
     padding: 10px 0;
+    width: 100px;
+    height: 50px;
     border-top: 1px solid #e8e8e8;
-  }
+    margin-top:100px;
+
+
+
   .user {
     margin-top: 5em;
     padding-top: 0;

@@ -9,6 +9,7 @@
         <thead>
           <tr>
             <th>Picture</th>
+            <th> Name</th>
             <th>Info</th>
             <th>Links</th>
             <th>Content</th>
@@ -20,6 +21,7 @@
           <% @portfolios.each do |portfolio| %>
             <tr>
               <td><%= image_tag portfolio.image.url(:thumb) %></td>
+              <td><%= portfolio.name %></td>
               <td><%= portfolio.info %></td>
               <td><%= portfolio.links %></td>
               <td><%= portfolio.content %></td>

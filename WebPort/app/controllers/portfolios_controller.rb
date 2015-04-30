@@ -12,6 +12,7 @@ class PortfoliosController < ApplicationController
   # GET /portfolios/1
   # GET /portfolios/1.json
   def show
+    @portfolio = Portfolio.find(params[:id])
   end
 
   # GET /portfolios/new
@@ -26,9 +27,10 @@ class PortfoliosController < ApplicationController
   # POST /portfolios
   # POST /portfolios.json
   def create
-    @portfolio = current_user.portfolio.build(:user_id => params[:user_id])
-
-    
+    @portfolio = Portfolio.create(portfolio_params)
+    @portfolio.user = current_user
+    current_user.portfolio_id = @portfolio.id
+  
     respond_to do |format|
       if @portfolio.save
         format.html { redirect_to @portfolio, notice: 'Portfolio was successfully created.' }
@@ -72,6 +74,6 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.require(:portfolio).permit(:info, :links, :content , :image, :photo, :pdf, :user)
+      params.require(:portfolio).permit(:info, :links, :content ,  :name ,:image, :photo, :pdf, :user)
     end
 end

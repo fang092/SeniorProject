@@ -1,13 +1,12 @@
 <div class = "jumbotron page-content-wrapper">
 	<div class = "container-fluid">	
 
-		<p id="notice"><%= notice %></p>
-
 		<table class = "table table-hover">
 
 			<thread>
 				<tr>
 					<th><strong>Picture</strong></th>
+					<th><strong>Name</strong></th>
 					<th><strong>Info</strong></th>
 					<th><strong>Links</strong></th>
 					<th><strong>Content</strong></th>
@@ -18,6 +17,7 @@
 				
 				<tr>
 					<td> <%= image_tag @portfolio.image.url(:medium) %></td>
+					<th><%= @portfolio.name %></td>
 					<td> <%= @portfolio.info %> </td>
 					<td> <%= @portfolio.links %> </td>
 					<td> <%= @portfolio.content %> </td>

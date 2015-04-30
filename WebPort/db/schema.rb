@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150423204502) do
+ActiveRecord::Schema.define(version: 20150429215347) do
 
   create_table "monsters", force: :cascade do |t|
     t.string   "name"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20150423204502) do
     t.integer  "photo_id"
     t.integer  "pdf_id"
     t.integer  "user_id"
+    t.string   "name"
   end
 
   add_index "portfolios", ["pdf_id"], name: "index_portfolios_on_pdf_id"
