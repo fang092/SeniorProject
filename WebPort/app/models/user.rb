@@ -11,9 +11,12 @@ class User < ActiveRecord::Base
                     has_secure_password
                     validates :password, length: { minimum: 6 }, allow_blank: true
 
-  has_attached_file  :image, styles: { large: "600x600#" , medium: "300x300#", thumb: "100x100#" }
+  has_attached_file  :image, styles: { large: "600x600#" , medium: "300x300#", thumb: "100x100#", small:"75x575#" }
   validates_attachment_content_type :image, content_type:  /\Aimage\/.*\Z/
   has_many :portfolios  , dependent: :destroy
+
+  has_attached_file :bgimage, styles:{ large:  "950x150#" }
+  validates_attachment_content_type :bgimage, content_type: /\Aimage\/.*\Z/
 
  # Returns the hash digest of the given string.
   def User.digest(string)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429215347) do
+ActiveRecord::Schema.define(version: 20150503155917) do
 
   create_table "monsters", force: :cascade do |t|
     t.string   "name"
@@ -84,13 +84,13 @@ ActiveRecord::Schema.define(version: 20150429215347) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "password_digest"
     t.string   "remember_digest"
-    t.boolean  "admin",              default: false
+    t.boolean  "admin",                default: false
     t.string   "activation_digest"
-    t.boolean  "activated",          default: false
+    t.boolean  "activated",            default: false
     t.datetime "activated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
@@ -99,6 +99,11 @@ ActiveRecord::Schema.define(version: 20150429215347) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.integer  "portfolio_id"
+    t.string   "bgimage_file_name"
+    t.string   "bgimage_content_type"
+    t.integer  "bgimage_file_size"
+    t.datetime "bgimage_updated_at"
+    t.string   "info"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

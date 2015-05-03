@@ -134,6 +134,8 @@ aside {
     }
   }
 }
+  
+
 
 .gravatar {
   float: left;
@@ -207,43 +209,56 @@ input {
 
   }
 }
+.userpane
+{
+  margin-left:5%;
+  margin-top:5%;
+}
+
+
 /* portfolios */
 
-.portfolios
+
+#portfolios 
 {
-    list-style: none;
-    padding: 0;
-    padding: 10px 0;
-    width: 100px;
-    height: 50px;
-    border-top: 1px solid #e8e8e8;
-    margin-top:100px;
-
-
-
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .content {
+  list-style: none;
+  padding: 0;
+  margin-left:20%;
+    div
+    {
+      padding: 10px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+    .user 
+    {
+      margin-top: 5em;
+      padding-top: 0;
+    }
+  .content 
+  {
     display: block;
     margin-left: 60px;
-    img {
+
+    img 
+    {
       display: block;
       padding: 5px 0;
     }
   }
-  .timestamp {
+  .timestamp 
+  {
     color: gray;
     display: block;
     margin-left: 60px;
   }
-  .image {
+  .image 
+  {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
   }
 }
+
 aside {
   textarea {
     height: 100px;
@@ -256,4 +271,43 @@ span.picture {
   input {
     border: 0;
   }
+}
+.leftpane
+{
+  margin-top:6%;
+  margin-left:7%;
+  float:left;
+  width:300px;
+  height:300px;
+  background-color:gray;
+  border: 1px  black solid;
+
+}
+.rightpane
+{
+  margin-top:6%;
+  margin-left:6%;
+  float:left;
+}
+.clear
+{
+  clear:both;
+}
+.bgimage
+{
+  width:950px;
+  height:150px;
+  border: 2px black solid;
+  z-index: -1;
+  margin-bottom:5%;
+  position:absolute;
+
+
+}
+.profileinfo
+{
+  margin:2%;
+  width:500px;
+  height:100px;
+  color:black;
 }
