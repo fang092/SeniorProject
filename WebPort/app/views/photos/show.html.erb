@@ -1,14 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class = "jumbotron page-content-wrapper">
+	<div class = "container-fluid">	
 
-<p>
-  <strong>Name:</strong>
-  <%= @photo.name %>
-</p>
+		<table class = "table table-hover">
+			<thread>
+				<tr>
+				 <th> <strong>Picture:</strong></th>
+				 <th><strong>Name:</strong></th>
+				 <th><strong>Info:</strong></th>
+				</tr>
+			</thread>
+			<tbody>
+				<tr>
+				 	<td><%= image_tag @photo.image.url(:thumb) %></td>
+					<td><%= @photo.name %></td>
+					<td><%= @photo.info %></td>
+				</tr>
+			</tbody>
+		</table>
 
-<p>
-  <strong>Info:</strong>
-  <%= @photo.info %>
-</p>
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+		<%= link_to 'Edit', edit_photo_path(@photo) %> |
+		<%= link_to 'Back', photos_path %>
+	</div>
+</div>

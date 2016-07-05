@@ -14,7 +14,7 @@ class PdFsController < ApplicationController
 
   # GET /pdfs/new
   def new
-    @pdf = Pdf.new
+    @pdf = Pdf.new(:portfolio_id => params[:portfolio_id])
   end
 
   # GET /pdfs/1/edit

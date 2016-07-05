@@ -17,13 +17,21 @@
 				
 				<tr>
 					<td> <%= image_tag @portfolio.image.url(:medium) %></td>
-					<th><%= @portfolio.name %></td>
+					<td><%= @portfolio.name %></td>
 					<td> <%= @portfolio.info %> </td>
 					<td> <%= @portfolio.links %> </td>
 					<td> <%= @portfolio.content %> </td>
 				</tr>
 			</tbody>
 		</table>
+		<% @portfolio.photos.each do |photo| %>
+			<%= image_tag photo.image.url(:thumb) %>
+		<% end %>
+		<br>
+		<br>
+
+		<%= link_to 'Add Photo', new_photo_path(portfolio_id: @portfolio.id) , :class => "btn"%>
+		
 
 		<%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 		<%= link_to 'Back', portfolios_path %>

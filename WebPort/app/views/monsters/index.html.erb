@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Picture</th>
       <th>Name</th>
       <th>Species</th>
       <th>Element</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @monsters.each do |monster| %>
       <tr>
+        <td><%= image_tag portfolio.image.url(:thumb)%></td>
         <td><%= monster.name %></td>
         <td><%= monster.species %></td>
         <td><%= monster.element %></td>

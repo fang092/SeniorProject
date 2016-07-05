@@ -14,7 +14,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @photo = Photo.new
+    @photo = Photo.new(:portfolio_id => params[:portfolio_id])
   end
 
   # GET /photos/1/edit
@@ -25,7 +25,6 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
-
     respond_to do |format|
       if @photo.save
         format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
@@ -69,6 +68,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:name, :info, :image)
+      params.require(:photo).permit(:name, :info, :image, :portfolio_id)
     end
 end

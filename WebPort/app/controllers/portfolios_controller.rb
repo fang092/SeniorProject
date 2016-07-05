@@ -30,6 +30,7 @@ class PortfoliosController < ApplicationController
     @portfolio = Portfolio.create(portfolio_params)
     @portfolio.user = current_user
     current_user.portfolio_id = @portfolio.id
+    
   
     respond_to do |format|
       if @portfolio.save

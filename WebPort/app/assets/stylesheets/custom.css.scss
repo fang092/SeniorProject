@@ -158,6 +158,12 @@ input {
 }
 .btn 
 {
+  background-color:black;
+  color:white;
+}
+.btn btn-lg btn-primary
+{
+  background-color:black;
   color:white;
 }
 #error_explanation {
@@ -279,8 +285,7 @@ span.picture {
   float:left;
   width:300px;
   height:300px;
-  background-color:gray;
-  border: 1px  black solid;
+  
 
 }
 .rightpane
@@ -310,4 +315,12 @@ span.picture {
   width:500px;
   height:100px;
   color:black;
+}
+.left
+{
+  float:left;
+}
+.right
+{
+  float:left;
 }
